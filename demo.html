@@ -1,11 +1,26 @@
 
 <html>
-<head>creating an array in javascript</head>
+<head>Operations an array in javascript</head>
 <body>
 <p id="demo"></p>
 </body>
 <script>
 let cars = ["BMW", "VOLVO", "HONDA"];
-document.getElementById("demo").innerHTML = cars;
+ document.getElementById("demo").innerHTML = cars; //<!--Create an array O/P BMW,VOLVO,HONDA  -->
+
+ let BMW = cars[0];
+document.getElementById("demo").innerHTML = BMW; // <!--accessing  an array  O/P BMW  -->
+
+ let len = cars.length;
+document.getElementById("demo").innerHTML = len; // <!-Array length Property o/p 3  -->
+
+
+let last = cars[cars.length-1];
+ document.getElementById("demo").innerHTML = last; //<!-- Acees last array item o/p HONDA -->
+
+cars.forEach((item,index,array) => { console.log(item,index);}); //<!-- loop over array item ,  go to developer option  in browser there u see console option -->
+
+
+
 </script>
 </html>
