@@ -1,6 +1,6 @@
 
 <html>
-<head>Operations an array in javascript</head>
+<head> Operation  And Methods in Array </head>
 <body>
 <p id="demo"></p>
 </body>
@@ -19,6 +19,56 @@ let last = cars[cars.length-1];
  document.getElementById("demo").innerHTML = last; //<!-- Acees last array item o/p HONDA -->
 
 cars.forEach((item,index,array) => { console.log(item,index);}); //<!-- loop over array item ,  go to developer option  in browser there u see console option -->
+document.getElementById("demo").innerHTML = cars.toString();
+
+let last1 = cars.pop();
+document.getElementById("demo").innerHTML = last1;  //<!-- delete last item i.e. honda o/p bmw volvo -->
+
+cars.push("Audi");
+document.getElementById("demo").innerHTML = cars;   //<!-- insert new item at the end of array i.e. audi  o/p bmw volvo audi -->
+
+cars.shift();
+document.getElementById("demo").innerHTML = cars;   //<!-- removes first item from the  array i.e. bmw  o/p  volvo audi -->
+
+
+cars.unshift("Buggati");
+document.getElementById("demo").innerHTML = cars;   //<!-- insert new item at the beggining of array   o/p buggati volvo audi -->
+
+let Bikes =["yamaha","suzuki","royal enfield"];
+let vehicle= cars.concat(Bikes);
+document.getElementById("demo").innerHTML = vehicle;   //<!-- create a new array by merging two array  o/p buggati volvo audi yamaha suzuki royal enfield  -->
+
+vehicle.sort();
+document.getElementById("demo").innerHTML = vehicle;   //<!-- sort an array in ascending order o/p Audi,Buggati,VOLVO,royal enfield,suzuki,yamaha -->
+
+vehicle.reverse();
+document.getElementById("demo").innerHTML = vehicle;   //<!-- sort an array in ascending order o/p Audi,Buggati,VOLVO,royal enfield,suzuki,yamaha -->
+
+let num1 = [2, 4, 5, 7, 6, 8];
+let num2 = num1.map(multiply);
+function multiply(value){
+    return value *2;  //<!-- creates a new array and perform function on each array element o/p 4,8,10,14,12,16 -->
+}
+document.getElementById("demo").innerHTML = num2; 
+
+
+
+let num3 =num1.filter(comp); //comp is a function
+function comp(value) {
+return value>4;  //<-- appply condtion on every element of array o/p 5,7,6,8 -->
+}
+document.getElementById("demo").innerHTML = num3; 
+
+
+
+let num4 = num1.reduce(sum);
+function sum(total,value){
+    return total+value; //<-- reduces size of array from many  to one by using function o/p 32 -->
+}
+document.getElementById("demo").innerHTML = num4; 
+
+
+
 
 
 
